@@ -60,22 +60,19 @@ print("Это введенная строка", b)
 
 Задача: Создать 6 переменных и выполнить дейсивия
 
-a=1
-b=2
-c=3
-d=4
-e=5
-f=6
-print(a+c)
-print(e+b)
-print(e-a)
-print(e-c)
-print(b*d)
-print(c*f)
-print(e/b)
-print(f/c)
-print(f%d)
-print(d%c)
+a=int(input("Введите первое число"))
+b=int(input("Введите второе число"))
+c=int(input("Введите третье число"))
+print(a+b)
+print(b+c)
+print(c-a)
+print(a-b)
+print(a*b)
+print(b*c)
+print(b/c)
+print(a/c)
+print(c%a)
+print(b%a)
 
 Теория: 
 
