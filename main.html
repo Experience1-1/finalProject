@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Моя страница</title>
+  <style>
+    body {
+      background-color: #F0F8FF;
+      color: black;
+      font-family: Segoe UI, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;*/
+    }
+
+    #button1,
+    #button2 {
+      background-color: white;
+      color: #1E90FF;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 10px;
+    }
+
+    #button1:hover,
+    #button2:hover {
+      background-color: #1E90FF;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Главное меню</h1>
+  <button id="button1" onclick="window.location.href='teory.html'">Теория</button>
+  <button id="button2" onclick="window.location.href='practise.html'">Практика</button>
+</body>
+</html>
