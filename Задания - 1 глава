@@ -220,7 +220,6 @@ a=5
 b="9"
 c=8
 d="4"
-
 print(str(a))
 print(int(b))
 print(str(c))
