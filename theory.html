@@ -52,7 +52,10 @@
     <a href="#section7">Логические операторы True и False</a>
     <a href="#section8">Цикл while</a>
     <a href="#section9">Цикл for</a>
-    <a href="#section10">Раздел 10</a>
+    <a href="#section10">Try и Except</a>
+    <a href="#section11">Глава 3. Def</a>
+    <a href="#section12">Class</a>
+    <a href="#section13">Конец. Немного про библиотеки Python</a>
   </div>
 
   <div class="section" id="section1">
@@ -606,9 +609,157 @@ else:
 </p>
     </div>
 <div class="section" id="section10">
-    <h2>Раздел 2</h2>
-    <p>Текст раздела 2.</p>
+    <h2>Try и Except</h2>
+    <p>
+Try и Except - это механизм обработки исключений в Python, который позволяет обработать ошибки и исключительные ситуации в программе. Блок try содержит код, который может вызвать исключение, а блок кроме содержит код, который будет выполнен в случае ошибки в ходе работы программы
+</p>
+    <p>
+Пример использования Try
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">try:
+    x = int(input("Введите число: "))
+    y = 10 / x
+    print("Результат: ", y)
+except ZeroDivisionError:
+    print("Ошибка: деление на ноль")
+except ValueError:
+    print("Ошибка: введено некорректное значение")</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы просим пользователя ввести число, затем пытаемся разделить 10 на это число и вывести результат. Если пользователь вводит некорректное значение (например, строку вместо числа) или пытается делить на ноль, то в блоке except выводится соответствующее сообщение об ошибке.
+
+Мы использовали два разных блока except, чтобы обработать две различные ошибки. ZeroDivisionError обрабатывает исключение, которое возникает при попытке деления на ноль, а ValueError обрабатывает исключение, которое возникает при попытке
+
+Также можно использовать блок кроме без указания типа исключения
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">try:
+    x = int(input("Введите число: "))
+    y = 10 / x
+    print("Результат: ", y)
+except:
+    print("Ошибка: что-то пошло не так")</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+</p>
     </div>
+  <div class="section" id="section11">
+      <h2>Глава 3. Def</h2>
+      <p>def в Python используется для определения функций. Функция - это фрагмент кода, который может быть вызван из других частей программы. Функция может принимать аргументы (значения, которые передаются функции при ее вызове) и возвращать значения.
+
+Пример определения функции без аргументов и возвращаемого значения:</p>
+
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">def say_hello():
+    print("Hello, world!")
+say_hello() # выводит "Hello, world!"</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы определили функцию 'say_hello()
+</p>
+<p>
+
+Пример определения функции с аргументами:
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">def greet(name):
+    print("Hello, " + name + "!")
+greet("Alice") # выводит "Hello, Alice!"
+greet("Bob") # выводит "Hello, Bob!"</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы определили функцию 'greet'
+  </p>
+<p>
+Пример определения функции с возвращаемым значением:
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">def add_numbers(x, y):
+    return x + y
+result = add_numbers(3, 5)
+print(result) # выводит "8"</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы определили функцию 'add_numbers() x и y, складывает их и возвращает результат. Для вызова этой функции с двумя аргументами и получения возвращаемого значения, мы используем ее имя и сохраняем результат в переменную:
+</p>
+
+<p>
+Также можно определить функцию с необязательными аргументами, которые имеют значения по умолчанию:
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">def greet(name, greeting="Hello"):
+    print(greeting + ", " + name + "!")
+greet("Alice") # выводит "Hello, Alice!"
+greet("Bob", "Hi") # выводит "Hi, Bob!"</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы определили функцию 'greet() name и 'приветствие greeting. При вызове функции, если мы передаем только один аргумент ('name), то 'greeting принимает значение по умолчанию - "Hello". Если мы передаем два аргумента ('name и 'greeting), то greeting принимает переданное значение
+
+
+
+      </p>
+      </div>
+<div class="section" id="section12">
+    <h2>Class</h2>
+    <p>
+        Class
+
+Пример определения класса:
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">class Person:
+    def init(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы определили класс 'Person name и 'возраст age, и метод 'greet(), который выводит сообщение на экран. Метод init() - это конструктор класса, который вызывается при создании объекта и инициализирует его атрибуты. Аргумент 'self в методах класса ссылается на текущий объект.
+
+Для создания объекта класса, мы вызываем его конструктор, передавая значения атрибутов:
+</p>
+      <form method="POST">
+<textarea name="code" id="code-input" rows="10" cols="50">person1 = Person("Alice", 25)
+person2 = Person("Bob", 30)
+print(person1.name) # выводит "Alice"
+print(person2.age) # выводит "30"
+person1.greet() # выводит "Hello, my name is Alice and I'm 25 years old."
+person2.greet() # выводит "Hello, my name is Bob and I'm 30 years old."</textarea><br><br>
+            <input type="submit" value="Выполнить">
+          </form>
+<p>
+В этом примере мы создали два объекта класса 'Person и 'person2 - с разными значениями атрибутов.
+
+Для доступа к атрибутам объекта, мы используем точечную нотацию:
+
+Для вызова методов объекта, мы также используем точечную нотацию:
+
+    </p>
+    </div>
+    <div class="section" id="section13">
+        <h2>Конец. Немного про библиотеки python</h2>
+        <p>
+
+Python имеет огромное количество библиотек, которые позволяют значительно упростить и ускорить разработку различных приложений. Ниже перечислены некоторые из наиболее популярных библиотек Python:
+
+NumPy - библиотека для работы с многомерными массивами данных.
+Matplotlib - библиотека для создания графиков и визуализации данных.
+TensorFlow - библиотека для создания и обучения нейронных сетей
+Pygame - библиотека для создания игр и графических приложений.
+Requests - библиотека для выполнения HTTP-запросов и работы с веб-сайтами.
+Django - библиотека для создания полноценных веб-сайтов
+Каждая из этих библиотек имеет свой функционал и назначение, и может быть использована для решения определенных задач в различных областях разработки программного обеспечения. В целом, наличие множества библиотек значительно упрощает и ускоряет разработку в Python.
+        </p>
+        </div>
       </ul>
     </div>
   </body>
